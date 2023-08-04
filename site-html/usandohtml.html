@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando HTML</title>
+</head>
+<body>
+    
+    <h1>Usando HTML</h1>
+
+    <p id = 'Introdução'>
+        Nessa página, você vai aprender tudo sobre HTML: a <strong>linguagem de marcação</strong> que revolucionou o desenvolvimento de páginas web.
+    </p>
+
+    <h2>Índice</h2>
+
+    <p><a href="#O que é HTML?"><strong>O que é HTML?</strong></a></p>
+    <p><a href="#Estrutura HTML"><strong>Estrutura do HTML</strong></a></p>
+    <p><a href="#Comandos"><strong>Principais comandos HTML</strong></a></p>
+
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="Logo HTML" height="500">
+        <figcaption>Logo oficial do HTML5</figcaption>
+    </figure>
+
+    <div id = 'O que é HTML?'>
+        <h2>O que é HTML?</h2>
+        <p>
+            HTML, sigla para "HyperText Markup Language", é uma linguagem de marcação utilizada para <a href="index.html"><strong>criar e estruturar páginas na web</strong></a>. Ele fornece a estrutura básica e os elementos necessários para definir o conteúdo de um site, permitindo a formatação, organização e exibição de informações na internet.
+        </p>
+
+        <figure>
+            <img src="https://neilpatel.com/wp-content/uploads/2017/12/codigos-html-para-paginas-web.jpeg" alt="código html" height="400">
+            <figcaption>Código HTML genérico</figcaption>
+        </figure>
+
+        <h2>Origem e História</h2>
+
+            <p>
+                O HTML foi criado por <abbr title="Artigo sobre Tim Berners-Lee da Wikipedia"><a href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee"><strong>Tim Berners-Lee</strong></a></abbr>, um cientista da computação britânico, em 1989 enquanto trabalhava na <abbr title="Artigo sobre a CERN"><a href="https://pt.wikipedia.org/wiki/Organiza%C3%A7%C3%A3o_Europeia_para_a_Pesquisa_Nuclear">CERN (Organização Europeia para Pesquisa Nuclear)</a></abbr>. Naquela época, Berners-Lee estava procurando uma maneira de compartilhar informações e documentos científicos <strong>de forma eficiente</strong> entre seus colegas. Ele percebeu que, para atingir esse objetivo, precisaria de um sistema que permitisse a conexão entre diferentes documentos através de <strong>hiperlinks</strong>.
+            </p>
+
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg" alt="Foto de Tim Berners-Lee" height="400">
+                <figcaption>Foto de Time Berners-Lee</figcaption>
+            </figure>
+
+            <p>
+                Em 1990, Berners-Lee publicou o primeiro rascunho do que viria a ser conhecido como <strong>HTML</strong>. A linguagem originalmente tinha apenas 18 elementos (tags), e as primeiras páginas da web eram bastante simples, com foco na estruturação básica do conteúdo.
+            </p>
+
+        <h2>Finalidade do HTML</h2>
+
+            <p>
+                A principal finalidade do HTML é fornecer uma estrutura básica para a criação de documentos que possam ser visualizados em um <strong>navegador web</strong>. Ele é a base de toda a web moderna e é responsável por permitir que os sites tenham conteúdos interativos e conectados através de <u>links</u>.
+            </p>
+
+            <p>
+                O HTML é uma <strong>linguagem de marcação</strong>, o que significa que ela não é uma linguagem de programação tradicional como C++ ou Python, mas sim uma linguagem que descreve a <strong>estrutura e organização dos elementos presentes em uma página web</strong>. Através do HTML, é possível criar parágrafos, títulos, imagens, formulários, tabelas e muito mais.
+            </p>
+
+            <img src="https://cdn-icons-png.flaticon.com/512/524/524545.png" alt="html" height="300">
+            
+        <h2>Sobre o HTML</h2>
+
+            <p>
+                O HTML é uma linguagem que utiliza <strong>"tags"</strong> para marcar elementos dentro de um documento. As tags são representadas por um conjunto de caracteres especiais entre colchetes angulares (&lt;&gt;). Cada tag tem um propósito específico e determina como o conteúdo dentro dela será estruturado ou formatado.
+            </p>
+
+            <p>
+                Além disso, o HTML pode ser combinado com outras tecnologias, como folhas de estilo <a href="usandocss.html"><strong>CSS (Cascading Style Sheets)</strong></a> para estilizar o conteúdo e tornar as páginas mais atraentes visualmente, e <a href="usandojs.html"><strong>JavaScript</strong></a> para adicionar <strong>interatividade e dinamismo</strong> aos elementos da página.
+            </p>
+            
+            <p>
+                Com o HTML, os desenvolvedores podem criar <a href="front&backend.html">sites estáticos</a>, mas, em conjunto com outras tecnologias, é possível construir sites e aplicativos web complexos e <a href="front&backend.html">interativos</a>.
+            </p>
+
+    </div>
+
+    <div id = 'Estrutura HTML'>
+
+        <h2>Estrutura do HTML</h2>
+
+        <p>
+            A estrutura do HTML é fundamental para a criação de páginas web e consiste em um conjunto de elementos que formam a base dos documentos HTML. Cada elemento é representado por uma tag, que é delimitada por colchetes angulares (&lt;&gt;). Essas tags definem a função e a estrutura dos diferentes elementos na página. A seguir, vamos explorar os principais componentes da estrutura do HTML:
+        </p>
+
+        <figure>
+            <img src="https://www.tutorialstonight.com/assets/html/html-tags-list.webp" alt="tags html" height="500">
+            <figcaption>Tags HTML</figcaption>
+        </figure>
+
+        <h2>Elementos Básicos</h2>
+
+        <p>
+            O elemento básico de um documento HTML é a tag &lt;html&gt;. Ela envolve todo o conteúdo da página e informa ao navegador que o arquivo é um documento HTML. Dentro da tag &lt;html&gt;, encontramos duas seções principais: &lt;head&gt; e &lt;body&gt;.
+        </p>
+
+        <ul>
+            <li>
+                <p>
+                    <strong>&lt;head&gt;</strong>: A seção &lt;head&gt; contém informações sobre o documento, como metadados, títulos e referências a arquivos externos, como folhas de estilo CSS ou scripts JavaScript. Essas informações não são exibidas diretamente na página, mas são essenciais para o funcionamento correto do documento.
+                </p>
+
+                    <figure>
+                        <img src="https://www.sitesbay.com/html/images/head-tag.png" alt="head-tag" height="400">
+                        <figcaption>Elementos dentro da tag &lt;head&gt;&lt;/head&gt;</figcaption>
+                    </figure>
+            </li>
+
+            <li>
+                <p>
+                    &lt;body&gt;: A seção &lt;body&gt; contém o conteúdo principal da página, como textos, imagens, links, formulários e outros elementos visíveis que serão exibidos no navegador.
+                </p>
+            </li>
+        </ul>
+
+        <p>
+            Aqui está um exemplo básico da estrutura de um código HTML:
+        </p>
+
+        <a href="#Comandos">
+            <figure>
+                <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\imagens\exemplo_basico_html.JPG" alt="Exemplo de estrutura de um código em HTML" height="400">
+            </figure>
+        </a>
+
+    </div>
+
+    <div id = 'Comandos'>
+
+        <h2>Comandos HTML</h2>
+
+        <p>
+            Mostrarei aqui uma lista com as principais tags de html. Estão separadas em tags de <strong>texto</strong>, <strong>organização</strong> e <strong>mídia</strong>.
+        </p>
+
+            <img src="https://miro.medium.com/v2/resize:fit:1200/1*570gw5EfpV8q7V5BbPBiEQ.jpeg" alt="html" height="400">
+
+        <ol>
+            <li>
+                <h3>Tags textuais</h3>
+                <ul>
+                    <li>
+                        <strong>&lt;p&gt;&lt;/p&gt;</strong>: Usada para delimitar parágrafos;
+                    </li>
+
+                    <li>
+                        <strong>&lt;h'n'&gt;&lt;/h'n'&gt;</strong>: Usada para criar títulos, onde n pode ser 1, 2, 3, 4, 5 ou 6 de forma que 1 representa a maior fonte e 6 a menor fonte;
+                    </li>
+
+                    <li>
+                        <strong>&lt;strong&gt;&lt;/strong&gt;</strong> ou <strong>&lt;b&gt;&lt;b&gt;</strong>: Usada para deixar um texto em <strong>negrito</strong>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;em&gt;&lt;/em&gt;</strong> ou <strong>&lt;i&gt;&lt;/i&gt;</strong>: Usada para deixar um texto em <em>itálico</em>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;u&gt;&lt;/u&gt;</strong>: Deixa o texto <u>sublinhado</u>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;s&gt;&lt;/s&gt;</strong> ou <strong>&lt;del&gt;&lt;/del&gt;</strong>: Deixa o texto <s>tachado</s>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;ins&gt;&lt;/ins&gt;</strong>: Usada para indicar um <ins>texto inserido posteriormente</ins> ou de outro documento. Visualmente, não tem diferença da tag <strong>&lt;u&gt;&lt;/u&gt;</strong>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;sub&gt;&lt;/sub&gt;</strong>: Deixa um texto em forma de índice. Como esse<sub>textinho aqui em baixo</sub>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;sup&gt;&lt;/sup&gt;</strong>: Deixa um texto em forma de expoente. Como esse<sup>textinho aqui em cima</sup>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;blockquote&gt;&lt;/blockquote&gt;</strong>: <blockquote lang="pt-br" style="background-color: white;">Cria uma citação como essa!</blockquote>
+                    </li>
+
+                    <li>
+                        <strong>&lt;q&gt;&lt;/q&gt;</strong>: <q>tag de citação</q>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;abbr&gt;&lt;/abbr&gt;</strong>: <abbr title="abreviatura do texto">Cria uma abreviatura para um texto. Passe o mouse sobre esse texto para visualizar.</abbr>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;cite&gt;&lt;/cite&gt;</strong>: Usada para indicar <cite>citação</cite>. Visualmente, não possui diferença das tags <strong>&lt;em&gt;&lt;/em&gt</strong> ou <strong>&lt;i&gt;&lt;/i&gt;</strong>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;code&gt;&lt;/code&gt;</strong>: Usada para indicar um código. Exemplo: <code>print('Hello, world!')</code>;
+                    </li>
+
+                    <li>
+                        <strong>&lt;pre&gt;&lt;/pre&gt;</strong>: Essa tag mantém um <pre>texto pré-formatado,</pre> mantendo espaços em branco, fonte e quebras de linha exatamente como no código fonte. <pre>𝓔𝔁𝓮𝓶𝓹𝓵𝓸 𝓬𝓸𝓶 𝓯𝓸𝓷𝓽𝓮 𝓭𝓲𝓯𝓮𝓻𝓮𝓷𝓽𝓮;</pre>
+                    </li>
+
+                    <li>
+                        <strong>&lt;mark&gt;&lt;/mark&gt;</strong>: Tag usada para destacar um texto com fundo diferente com o argumento <code>style = 'background-color: (name_color)'</code>. Exemplo: <mark style = 'background-color: red'>Esse texto está com fundo vermelho</mark>. Você também pode usar o argumendo <code>title = 'abreviação'</code> para criar uma abreviação de um texto, assim como a tag <strong>&lt;abbr&gt;&lt;/abbr&gt;</strong>. Dessa forma, você pode adicionar um fundo diferente e uma abreviação para um texto ao mesmo tempo!. Exemplo: <mark title = 'Texto para abreviação/comentário' style="background-color: aqua;">Texto com fundo azul-água</mark>. A tag sozinha apenas deixa o <mark>texto com marca-texto</mark>.
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>Tags de organização</h3>
+                <ul>
+                    <li>
+                        <strong>&lt;head&gt;&lt;/head&gt;</strong>: Delimita o seu cabeçalho, onde serão colocadas as informações referente ao seu código html, como título, língua e outros;
+                    </li>
+
+                    <li>
+                        <strong>&lt;body&gt;&lt;/body&gt;</strong>: Delimita o corpo do seu código html. É aqui onde são colocadas as informações que aparecerão ao usuário;
+                    </li>
+
+                    <li>
+                        <strong>&lt;br&gt;</strong>: Quebra de linha;
+                    </li>
+
+                    <li>
+                        <strong>&lt;hr&gt;</strong>: Cria uma linha na horizontal;
+                    </li>
+
+                    <li>
+                        <strong>Listas</strong>:
+                        <ul>
+                            <li><strong>&lt;ul&gt;&lt;/ul&gt;</strong>: Lista sem ordem (aparece apenas um marcador);</li>
+                            <li><strong>&lt;ol&gt;&lt;/ol&gt;</strong>: Lista ordenada (aparecem números).</li>
+                        </ul>
+                        Ambos os tipos de listas utilizam <strong>&lt;li&gt;&lt;/li&gt;</strong> para criar um item da lista;
+                    </li>
+                    <li>
+                        <strong>&lt;div&gt;&lt;/div&gt;</strong>: Usada para organizar seu código. Não faz nenhuma diferença visual na página;
+                    </li>
+                    <li>
+                        <strong>&lt;&gt;&lt;/&gt;</strong>: ;
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>Tags de mídia</h3>
+                <ul>
+                    <li><strong>&lt;&gt;&lt;/&gt;</strong>: ;</li>
+                </ul>
+            </li>
+        </ol>
+
+    </div>
+
+</body>
+</html>
