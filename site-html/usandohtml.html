@@ -135,25 +135,25 @@
 
         <a href="#Comandos">
             <figure>
-                <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\imagens\exemplo_basico_html.JPG" alt="Exemplo de estrutura de um código em HTML" height="400">
+                <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\exemplo_basico_html.JPG" alt="Exemplo de estrutura de um código em HTML" height="400">
             </figure>
         </a>
 
     </div>
 
-    <div id = 'Comandos'>
+    <section id = 'Comandos'>
 
         <h2>Comandos HTML</h2>
 
         <p>
-            Mostrarei aqui uma lista com as principais tags de html. Estão separadas em tags de <strong>texto</strong>, <strong>organização</strong> e <strong>mídia</strong>.
+            Mostrarei aqui uma lista com as principais tags de html. Estão separadas em tags de <a href="#texto"><strong>texto</strong></a>, <a href="organização"><strong>organização</strong></a> e <a href="mídia"><strong>mídia</strong></a>.
         </p>
 
             <img src="https://miro.medium.com/v2/resize:fit:1200/1*570gw5EfpV8q7V5BbPBiEQ.jpeg" alt="html" height="400">
 
         <ol>
             <li>
-                <h3>Tags textuais</h3>
+                <h3 id = 'texto'>Tags textuais</h3>
 
                 <p>
                     Em HTML (Hypertext Markup Language), as tags de texto são usadas para estruturar e formatar o conteúdo textual de uma página da web. Abaixo estão algumas das principais tags de texto em HTML, juntamente com uma breve explicação de suas funções:
@@ -231,7 +231,7 @@
             </li>
 
             <li>
-                <h3>Tags de organização</h3>
+                <h3 id = 'organização'>Tags de organização</h3>
 
                 <p>
                     As tags de organização são usadas para estruturar e organizar o conteúdo de uma página da web. Abaixo estão todas as principais tags de organização do HTML5:
@@ -310,18 +310,81 @@
                     <li>
                         <strong>&lt;figure&gt;&lt;/figure&gt;</strong>: Usada para agrupar elementos de mídia, como imagens, vídeos ou áudios. A tag <strong>&lt;figcaption&gt;&lt;/figcaption&gt;</strong> dentro dela indica a legenda da imagem;
                     </li>
+
+                    <li>
+                        <strong>&lt;footer&gt;&lt;/footer&gt;</strong>: Usada para agrupar os elementos do rodapé.
+                    </li>
                 </ul>
             </li>
 
             <li>
-                <h3>Tags de mídia</h3>
+                <h3 id="mídia">Tags de mídia</h3>
                 <ul>
-                    <li><strong>&lt;&gt;&lt;/&gt;</strong>: ;</li>
+                    <li>
+                        <p>
+                            <strong>&lt;img&gt;</strong>: Usada para incorporar imagens a uma página web. Não precisa de fechamendo, o que siginfica que o conteúdo alternativo deve ser adicionado com o atributo <strong>alt='conteúdo_aternativo'</strong>, que aparecerá caso a imagem não seja suportada pelo navegador do usuário. O atributo <strong>alt</strong> também ajuda os mecanismos de pesquisa a saberem exatamente sobre o que aquela imagem se trata. Outros atributos da tag <strong>&lt;img&gt;</strong> são: <code>src = 'fonte_da_imagem'</code> (pode ser um link https de onde a imagem está hospedada ou o caminho do arquivo em sua máquina); <code>height = 'altura_em_pixels'</code>; <code>width = 'largura_em_pixels'</code>; entre muitos outros atributos que podem ser incorporados ao <a href="usandocss.html"><strong>CSS para estilizar a página web</strong></a>.
+                        </p>
+
+                        <figure>
+                            <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/07/Como-inserir-imagem-ou-logo-usando-HTML-no-seu-site-1.png" alt="inserindo imagens em HTML" height="300">
+                            <figcaption>Exemplo genérico de imagem em html</figcaption>
+                        </figure>
+                    </li>
+
+                    <li>
+                        <p>
+                            <strong>&lt;audio&gt;&lt;/audio&gt;</strong>: Usada para inserir áudio, suportando diversos formatos de áudios diferentes. Atributos:
+                        </p>
+
+                        <ol>
+                            <li>
+                                    <strong>'src' = 'caminho_do_audio'</strong>(obrigatório): Indica o caminho do áudio, pode ser o endereço https onde está hospedado ou o caminho para o arquivo em sua máquina; É recomendado utilizá-lo dentro da tag <strong>&lt;source&gt;&lt;/source&gt;</strong> para, usando o atributo <code>type</code>, possamos especificar o formato do nosso arquivo.
+                            </li>
+
+                            <li>
+                                <strong>'controls'</strong>: Quando inserido, exibe opções de controle ao áudio, como play, pause, volume, etc;
+                            </li>
+
+                            <li>
+                                <p>
+                                    <strong>'preload' = 'auto, metadata ou none'</strong>: Usado para indicar como o áudio deve ser pré-carregado pelo navegador. Existem três valores possíveis para o atributo:
+                                </p>
+
+                                <ol>
+                                    <li>
+                                        <strong>auto</strong>: O navegador decide automaticamente. Geralmente é a configuração padão;
+                                    </li>
+
+                                    <li>
+                                        <strong>metadata</strong>: Apenas os metadados do áudio (duração, autor, título, etc) são pré-carregados;
+                                    </li>
+
+                                    <li>
+                                        <strong>none</strong>: Nenhum metadado é pré-carregado. O áudio será baixado somente quando o usuário apertar o play.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+
+                        <figure>
+                            <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\exemplo_audio_html.JPG" alt="exemplo de como inserir um áudio em html">
+                            <figcaption>Exemplo de como inserir um áudio em HTML</figcaption>
+                        </figure>
+
+                        <p>
+                            Em resumo, os atributos <strong>src</strong>, <strong>controls</strong> e <strong>preload</strong>, juntamente com o elemento <strong>&lt;source&gt;</strong>, permitem personalizar a reprodução de áudio em uma página da web e garantir a compatibilidade com diferentes navegadores e formatos de áudio. O uso correto desses atributos e elementos ajuda a criar uma experiência de áudio mais acessível e funcional para os usuários. Usando o caminho e o tipo correto do áudio, o resultado será como do exemplo:
+                        </p>
+
+                        <audio controls preload="auto">
+                            <source src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\audio_Beethoven.mp3" type="audio/mpeg">
+                            Desculpe, infelizmente o áudio não pode ser carregado.
+                        </audio>
+                    </li>
                 </ul>
             </li>
         </ol>
 
-    </div>
+    </section>
 
     <footer>
         <!--Rodapé-->
