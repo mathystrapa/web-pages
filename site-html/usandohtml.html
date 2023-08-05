@@ -6,6 +6,17 @@
     <title>Usando HTML</title>
 </head>
 <body>
+
+    <header>   <!--Menu de navegação-->
+        <ul>
+            <li><a href="index.html"><strong>Confira tudo sobre desenvolvimento web</strong></a></li>
+            <li><a href="front&backend.html"><strong>Entenda de uma vez por todas o que são o front-end e o back-end</strong></a></li>
+            <li><a href="apis.html"><strong>O que é uma API?</strong></a></li>
+            <li><a href="usandocss.html"><strong>Aprenda a usar CSS</strong></a></li>
+            <li><a href="usandojs.html"><strong>Aprenda a usar JavaScript</strong></a></li>
+            <li><a href="https://go.hotmart.com/F85416329J">Confira nosso curso de lógica de programação e algoritmos!</a></li>
+        </ul>
+    </header>
     
     <h1>Usando HTML</h1>
 
@@ -14,10 +25,12 @@
     </p>
 
     <h2>Índice</h2>
-
-    <p><a href="#O que é HTML?"><strong>O que é HTML?</strong></a></p>
-    <p><a href="#Estrutura HTML"><strong>Estrutura do HTML</strong></a></p>
-    <p><a href="#Comandos"><strong>Principais comandos HTML</strong></a></p>
+    
+    <nav>
+        <p><a href="#O que é HTML?"><strong>O que é HTML?</strong></a></p>
+        <p><a href="#Estrutura HTML"><strong>Estrutura do HTML</strong></a></p>
+        <p><a href="#Comandos"><strong>Principais comandos HTML</strong></a></p>
+    </nav>
 
     <figure>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="Logo HTML" height="500">
@@ -141,6 +154,15 @@
         <ol>
             <li>
                 <h3>Tags textuais</h3>
+
+                <p>
+                    Em HTML (Hypertext Markup Language), as tags de texto são usadas para estruturar e formatar o conteúdo textual de uma página da web. Abaixo estão algumas das principais tags de texto em HTML, juntamente com uma breve explicação de suas funções:
+                </p>
+
+                <figure>
+                    <img src="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics/gato-rabujento-pequeno.png" alt="tags textuais" height="200">
+                </figure>
+
                 <ul>
                     <li>
                         <strong>&lt;p&gt;&lt;/p&gt;</strong>: Usada para delimitar parágrafos;
@@ -210,6 +232,15 @@
 
             <li>
                 <h3>Tags de organização</h3>
+
+                <p>
+                    As tags de organização são usadas para estruturar e organizar o conteúdo de uma página da web. Abaixo estão todas as principais tags de organização do HTML5:
+                </p>
+
+                <figure>
+                    <img src="https://www.alura.com.br/artigos/assets/o-que-e-html-suas-tags-parte-1-estrutura-basica/imagem2.jpg" alt="organização" height="300">
+                </figure>
+
                 <ul>
                     <li>
                         <strong>&lt;head&gt;&lt;/head&gt;</strong>: Delimita o seu cabeçalho, onde serão colocadas as informações referente ao seu código html, como título, língua e outros;
@@ -218,6 +249,18 @@
                     <li>
                         <strong>&lt;body&gt;&lt;/body&gt;</strong>: Delimita o corpo do seu código html. É aqui onde são colocadas as informações que aparecerão ao usuário;
                     </li>
+
+                    <li>
+                        <strong>&lt;header&gt;&lt;/header&gt;</strong>: Usada para indicar o cabeçalho da página, onde geralmente existe uma logotipo, menus de navegação, etc.;
+                    </li>
+
+                    <li>
+                        <strong>&lt;nav&gt;&lt;/nav&gt;</strong>: Usada em locais específicos da página com links de navegação, como um índice por exemplo;
+                    </li>
+                    
+                    <blockquote style="background-color: bisque;">
+                        <i><strong>Observação</strong>: Vale ressaltar a diferença de um sumário (ou índice) para um menu de navegação, pois este serve para facilitar a navegação entre páginas diferentes de um site e geralmente fica entre a tag <strong>&lt;header&gt;&lt;/header&gt;</strong>, enquanto aquele serve para facilitar a navegação entre tópicos da mesma página e geralmente fica entre a tag <strong>&lt;nav&gt;&lt;/nav&gt;</strong>.</i> 
+                    </blockquote>
 
                     <li>
                         <strong>&lt;br&gt;</strong>: Quebra de linha;
@@ -235,11 +278,37 @@
                         </ul>
                         Ambos os tipos de listas utilizam <strong>&lt;li&gt;&lt;/li&gt;</strong> para criar um item da lista;
                     </li>
+
                     <li>
                         <strong>&lt;div&gt;&lt;/div&gt;</strong>: Usada para organizar seu código. Não faz nenhuma diferença visual na página;
                     </li>
+
                     <li>
-                        <strong>&lt;&gt;&lt;/&gt;</strong>: ;
+                        <strong>&lt;!--'comentário'--&gt;</strong>: Usada para criar um comentário no código. Não aparece na página;
+                    </li>
+
+                    <li>
+                        <strong>&lt;main&gt;&lt;/main&gt;</strong>: Usada para indicar a parte principal da página. É recomendado que tenha apenas uma tag &lt;main&gt;;
+                    </li>
+
+                    <li>
+                        <strong>&lt;article&gt;&lt;/article&gt;</strong>: Usada para agrupar um conteúdo independente;
+                    </li>
+
+                    <li>
+                        <strong>&lt;section&gt;&lt;/section&gt;</strong>: Possui uma função semelhante à tag <strong>&lt;article&gt;&lt;/article&gt;</strong>, porém mais abraangente. É usada para agrupar conteúdos de mesmo valor semântico, mas não necessariamente independentes;
+                    </li>
+
+                    <li>
+                        <strong>&lt;aside&gt;&lt;/aside&gt;</strong>: Usada para organizar conteúdos que não fazem parte da estrutura principal, como barras laterais, rodapés, etc;
+                    </li>
+
+                    <li>
+                        <strong>&lt;hgroup&gt;&lt;/hgroup&gt;</strong>: Usada para agrupar vários cabeçalhos;
+                    </li>
+
+                    <li>
+                        <strong>&lt;figure&gt;&lt;/figure&gt;</strong>: Usada para agrupar elementos de mídia, como imagens, vídeos ou áudios. A tag <strong>&lt;figcaption&gt;&lt;/figcaption&gt;</strong> dentro dela indica a legenda da imagem;
                     </li>
                 </ul>
             </li>
@@ -254,5 +323,8 @@
 
     </div>
 
+    <footer>
+        <!--Rodapé-->
+    </footer>
 </body>
 </html>
