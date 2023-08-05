@@ -326,28 +326,39 @@
                         </p>
 
                         <figure>
-                            <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/07/Como-inserir-imagem-ou-logo-usando-HTML-no-seu-site-1.png" alt="inserindo imagens em HTML" height="300">
+                            <img src="https://www.hostinger.com.br/tutoriais/wp-content/uploads/sites/12/2018/07/Como-inserir-imagem-ou-logo-usando-HTML-no-seu-site-1.png" height="300">
                             <figcaption>Exemplo genérico de imagem em html</figcaption>
+                        </figure>
+
+                        <blockquote style="background-color: aquamarine;">
+                            <i>
+                                <strong>Observação</strong>: Um <b>gif</b> também é considerado uma imagem, então basta adicionar o caminho do gif dentro do atributo <code>src</code> da tag <strong>&lt;img&gt;</strong>
+                            </i>
+                        </blockquote>
+
+                        <figure>
+                            <img src="https://miro.medium.com/v2/resize:fit:1000/1*Q5_t-R0xRs07wW1Kf8rCSw.gif" alt="GIF de uma pessoa programando">
+                            <figcaption>Gif de programação</figcaption>
                         </figure>
                     </li>
 
-                    <li>
+                    <li id = 'tag_audio'>
                         <p>
                             <strong>&lt;audio&gt;&lt;/audio&gt;</strong>: Usada para inserir áudio, suportando diversos formatos de áudios diferentes. Atributos:
                         </p>
 
                         <ol>
                             <li>
-                                    <strong>'src' = 'caminho_do_audio'</strong>(obrigatório): Indica o caminho do áudio, pode ser o endereço https onde está hospedado ou o caminho para o arquivo em sua máquina; É recomendado utilizá-lo dentro da tag <strong>&lt;source&gt;&lt;/source&gt;</strong> para, usando o atributo <code>type</code>, possamos especificar o formato do nosso arquivo.
+                                    <code>'src' = 'caminho_do_audio'</code>(obrigatório): Indica o caminho do áudio, pode ser o endereço https onde está hospedado ou o caminho para o arquivo em sua máquina; É recomendado utilizá-lo dentro da tag <strong>&lt;source&gt;</strong> para, usando o atributo <code>type</code>, possamos especificar o formato do nosso arquivo.
                             </li>
 
                             <li>
-                                <strong>'controls'</strong>: Quando inserido, exibe opções de controle ao áudio, como play, pause, volume, etc;
+                                <code>'controls'</code>: Quando inserido, exibe opções de controle ao áudio, como play, pause, volume, etc. Sem ele, não aparecerá nada para o usuário e será necessário usar <a href="usandojs.html"><strong>JavaScript</strong></a> para configurar botões de controle;
                             </li>
 
                             <li>
                                 <p>
-                                    <strong>'preload' = 'auto, metadata ou none'</strong>: Usado para indicar como o áudio deve ser pré-carregado pelo navegador. Existem três valores possíveis para o atributo:
+                                    <code>'preload' = 'auto, metadata ou none'</code>: Usado para indicar como o áudio deve ser pré-carregado pelo navegador. Existem três valores possíveis para o atributo:
                                 </p>
 
                                 <ol>
@@ -366,19 +377,94 @@
                             </li>
                         </ol>
 
+                        <p>
+                            Em resumo, os atributos <code>src</code>, <code>src</code> e <code>preload</code>, juntamente com o elemento <strong>&lt;source&gt;</strong>, permitem personalizar a reprodução de áudio em uma página da web e garantir a compatibilidade com diferentes navegadores e formatos de áudio. O uso correto desses atributos e elementos ajuda a criar uma experiência de áudio mais acessível e funcional para os usuários. Usando o caminho e o tipo correto do áudio, o resultado será como do exemplo:
+                        </p>
+
                         <figure>
                             <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\exemplo_audio_html.JPG" alt="exemplo de como inserir um áudio em html">
                             <figcaption>Exemplo de como inserir um áudio em HTML</figcaption>
                         </figure>
 
-                        <p>
-                            Em resumo, os atributos <strong>src</strong>, <strong>controls</strong> e <strong>preload</strong>, juntamente com o elemento <strong>&lt;source&gt;</strong>, permitem personalizar a reprodução de áudio em uma página da web e garantir a compatibilidade com diferentes navegadores e formatos de áudio. O uso correto desses atributos e elementos ajuda a criar uma experiência de áudio mais acessível e funcional para os usuários. Usando o caminho e o tipo correto do áudio, o resultado será como do exemplo:
-                        </p>
+                        <p>A saída será:</p>
 
                         <audio controls preload="auto">
                             <source src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\audio_Beethoven.mp3" type="audio/mpeg">
                             Desculpe, infelizmente o áudio não pode ser carregado.
                         </audio>
+                    </li>
+
+                    <li>
+                        <p>
+                            <strong>&lt;video&gt;&lt;/video&gt;</strong>: Usada para incorporar vídeos em uma página da web, permitindo que os usuários assistam aos vídeos diretamente no navegador. Essa tag é uma das tags de mídia do HTML e oferece suporte a vários formatos de vídeo para garantir a compatibilidade com diversos navegadores. Os elementos e atributos da tag <strong>&lt;video&gt;&lt;/video&gt;</strong> são os mesmos da <a href="#tag_audio">tag <strong>&lt;audio&gt;&lt;/audio&gt;</strong></a>.
+                        </p>
+
+                        <figure>
+                            <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\exemplo_video_html.JPG" height="400">
+                            <figcaption>Exemplo de como inserir um vídeo do computador</figcaption>
+                        </figure>
+
+                        <p>A saída será: </p>
+
+                        <a href="https://go.hotmart.com/F85416329J" target="_blank">
+                            <figure>
+                                <video controls preload="auto" height="500">
+                                    <source src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\logica-de-programacao.mp4" type="video/mp4">
+                                    Desculpe, o vídeo não foi reproduzido
+                                </video>
+                                <figcaption>Vídeo sobre <strong>lógica de programação</strong></figcaption>
+                            </figure>
+                        </a>
+
+                        <a href="https://ymate.app/pt42">
+                            <blockquote>
+                                <i>
+                                    <strong>Observação</strong>: Para baixar vídeos e áudios do <strong>Youtube</strong>, utilize o site <strong>ymate</strong>.
+                                </i>
+                            </blockquote>
+                        </a>
+
+                        <p>
+                            Outra maneira de inserir vídeos do Youtube, sem precisar baixá-los, é utilizando a própria ferramenta. Veja como no passo a passo:
+                        </p>
+
+                        <ol>
+                            <li>
+                                <p>
+                                    Dentro da plataforma, clique em <strong>compartilhar</strong>
+                                </p>
+
+                                <figure>
+                                    <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\tutorial-yt1.JPG" alt="imagem mostrando botão compartilhar do Youtube" height="400">
+                                </figure>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Clique em <strong>embed</strong>
+                                </p>
+
+                                <figure>
+                                    <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\tutorial-yt2.JPG" alt="imagem mostrando botão embed" height="400">
+                                </figure>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Copie o código HTML
+                                </p>
+
+                                <figure>
+                                    <img src="C:\Users\mathy\OneDrive\Área de Trabalho\PROGRAMAÇÃO\web-pages\site-html\Mídia\tutorial-yt3.JPG" alt="imagem mostrando código embed" height="400">
+                                </figure>
+                            </li>
+                        </ol>
+
+                        <p>
+                            Pronto! Agora é só colar em seu código HTML. A saída será:
+                        </p>
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JaTf3dhx464" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </li>
                 </ul>
             </li>
