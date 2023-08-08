@@ -322,6 +322,10 @@
             <li>
                 <h3 id="tags-midia">Tags de mídia</h3>
                 <ul>
+                    <li id = 'tag-a'>
+                        <strong>&lt;a&gt;&lt;/a&gt;</strong>: Tag usada para inserir <strong>links</strong>. O link de destino deve ser inserido no atributo <a href="#attribute-target"><code>target</code></a>, podendo ser <code>'_blank'</code> ou <code>'_self'</code> (valor padrão);
+                    </li>
+                    
                     <li>
                         <p>
                             <strong>&lt;img&gt;</strong>: Usada para incorporar imagens a uma página web. Não precisa de fechamendo, o que siginfica que o conteúdo alternativo deve ser adicionado com o atributo <strong>alt='conteúdo_aternativo'</strong>, que aparecerá caso a imagem não seja suportada pelo navegador do usuário. O atributo <strong>alt</strong> também ajuda os mecanismos de pesquisa a saberem exatamente sobre o que aquela imagem se trata. Outros atributos da tag <strong>&lt;img&gt;</strong> são: <code>src = 'fonte_da_imagem'</code> (pode ser um link https de onde a imagem está hospedada ou o caminho do arquivo em sua máquina); <code>height = 'altura_em_pixels'</code>; <code>width = 'largura_em_pixels'</code>; entre muitos outros atributos que podem ser incorporados ao <a href="usandocss.html" target="_blank"><strong>CSS para estilizar a página web</strong></a>.
@@ -572,7 +576,7 @@
                                     <strong><code>action</code></strong>: Especifica o URL do servidor ou script que receberá e processará os dados do formulário quando ele for enviado. É o atributo mais importante do elemento <strong>&lt;form&gt;</strong>, pois determina o destino dos dados inseridos pelo usuário. Geralmente, você deve definir uma URL no atributo <code>action</code>, apontando para o servidor ou script que tratará o formulário. Por exemplo:
                                 </p>
                                 <figure>
-                                    <img src="Mídia/exemplo-tag-forms.JPG" height="300">
+                                    <img src="Mídia/exemplo-tag-forms.JPG" height="100">
                                     <figcaption>Exemplo de como usar o atributo <strong><code>action</code></strong></figcaption>
                                 </figure>
                             </li>
@@ -593,19 +597,29 @@
                                 </ul>
 
                                 <figure>
-                                    <img src="Mídia/exemplo-attribute-method.JPG" height="300">
+                                    <img src="Mídia/exemplo-attribute-method.JPG" height="100">
                                     <figcaption>Exemplo de como usar o atributo <code>method</code></figcaption>
                                 </figure>
                             </li>
 
                             <li id = 'attribute-target'>
                                 <p>
-                                    <strong><code>target</code></strong>: Define onde a resposta do servidor será exibida após o envio do formulário. Os valores possíveis são:
+                                    <strong><code>target</code></strong>: Define onde a resposta do servidor será exibida após o envio do formulário. Também é usado na <a href="#tag-a"><strong>tag de ancoragem</strong></a>. Os valores possíveis são:
                                 </p>
 
                                 <ul>
-                                    <li><code>_blank</code>: A resposta será aberta em uma nova janela ou aba;</li>
+                                    <li>
+                                        <code>_blank</code>: A resposta será aberta em uma nova janela ou aba;
+                                    </li>
+
+                                    <li>
+                                        <code>_self</code>: A resposta será aberta na mesma janela ou aba em que o formulário foi enviado (valor padrão).
+                                    </li>
                                 </ul>
+                            </li>
+
+                            <li>
+                                <strong><code>enctype</code></strong>: Especifica como os dados do formulário serão codificados antes de serem enviados para o servidor. É usado principalmente quando o formulário contém campos do tipo file, que são usados para fazer upload de arquivos. Os valores possíveis são:
                             </li>
                         </ol>
                         <p>
