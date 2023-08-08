@@ -567,8 +567,50 @@
                         <strong>&lt;form&gt;&lt;/form&gt;</strong>: É uma das tags fundamentais em HTML e é usada para criar um formulário interativo em uma página da web. Essa tag envolve todos os elementos do formulário, definindo uma seção do documento que será enviada ao servidor para processamento ou manipulação. Ela é uma das principais tags de formulário, permitindo a coleta de dados dos usuários e a interação com o servidor. Principais atributos da tag <strong>&lt;form&gt;&lt;/form&gt;</strong>:
 
                         <ol>
-                            <code>action</code>: ;
+                            <li id = 'attribute-action'>
+                                <p>
+                                    <strong><code>action</code></strong>: Especifica o URL do servidor ou script que receberá e processará os dados do formulário quando ele for enviado. É o atributo mais importante do elemento <strong>&lt;form&gt;</strong>, pois determina o destino dos dados inseridos pelo usuário. Geralmente, você deve definir uma URL no atributo <code>action</code>, apontando para o servidor ou script que tratará o formulário. Por exemplo:
+                                </p>
+                                <figure>
+                                    <img src="Mídia/exemplo-tag-forms.JPG" alt="">
+                                    <figcaption>Exemplo de como usar o atributo <strong><code>action</code></strong></figcaption>
+                                </figure>
+                            </li>
+
+                            <li id = 'attribute-method'>
+                                <p>
+                                    <strong><code>method</code></strong>: Especifica o método HTTP que será usado para enviar os dados do formulário para o servidor. Existem dois valores possíveis:
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        <code>GET</code>: Os dados do formulário são anexados à URL como parâmetros de consulta. É útil para formulários simples, mas tenha em mente que as informações do formulário serão visíveis na barra de endereços do navegador e, portanto, não é adequado para dados confidenciais ou muito extensos;
+                                    </li>
+
+                                    <li>
+                                        <code>POST</code>: Os dados do formulário são enviados no corpo da solicitação HTTP, tornando-os mais seguros e adequados para dados confidenciais ou grandes quantidades de informações. É o método mais comum para o envio de formulários.
+                                    </li>
+                                </ul>
+
+                                <figure>
+                                    <img src="Mídia/exemplo-attribute-method.JPG" alt="">
+                                    <figcaption>Exemplo de como usar o atributo <code>method</code></figcaption>
+                                </figure>
+                            </li>
+
+                            <li id = 'attribute-target'>
+                                <strong><code>target</code></strong>: Define onde a resposta do servidor será exibida após o envio do formulário. Os valores possíveis são:
+                            </li>
                         </ol>
+                        <p>
+                            Exemplo da tag <strong>&lt;form&gt;&lt;/form&gt;</strong>: 
+                        </p>
+
+                        <img src="" alt="">
+
+                        <form action="">
+
+                        </form>
                     </li>
                 </ul>
             </li>
@@ -579,9 +621,10 @@
         </ol>
 
     </section>
+</body>
 
     <footer>
         <!--Rodapé-->
     </footer>
-</body>
+
 </html>
