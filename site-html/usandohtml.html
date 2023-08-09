@@ -567,7 +567,7 @@
                 </p>
 
                 <ul>
-                    <li>
+                    <li id="tag-form">
                         <strong>&lt;form&gt;&lt;/form&gt;</strong>: É uma das tags fundamentais em HTML e é usada para criar um formulário interativo em uma página da web. Essa tag envolve todos os elementos do formulário, definindo uma seção do documento que será enviada ao servidor para processamento ou manipulação. Ela é uma das principais tags de formulário, permitindo a coleta de dados dos usuários e a interação com o servidor. Principais atributos da tag <strong>&lt;form&gt;&lt;/form&gt;</strong>:
 
                         <ol>
@@ -588,11 +588,11 @@
 
                                 <ul>
                                     <li>
-                                        <code>GET</code>: Os dados do formulário são anexados à URL como parâmetros de consulta. É útil para formulários simples, mas tenha em mente que as informações do formulário serão visíveis na barra de endereços do navegador e, portanto, não é adequado para dados confidenciais ou muito extensos;
+                                        <code>get</code>: Os dados do formulário são anexados à URL como parâmetros de consulta. É útil para formulários simples, mas tenha em mente que as informações do formulário serão visíveis na barra de endereços do navegador e, portanto, não é adequado para dados confidenciais ou muito extensos;
                                     </li>
 
                                     <li>
-                                        <code>POST</code>: Os dados do formulário são enviados no corpo da solicitação HTTP, tornando-os mais seguros e adequados para dados confidenciais ou grandes quantidades de informações. É o método mais comum para o envio de formulários.
+                                        <code>post</code>: Os dados do formulário são enviados no corpo da solicitação HTTP, tornando-os mais seguros e adequados para dados confidenciais ou grandes quantidades de informações. É o método mais comum para o envio de formulários.
                                     </li>
                                 </ul>
 
@@ -618,19 +618,174 @@
                                 </ul>
                             </li>
 
-                            <li>
-                                <strong><code>enctype</code></strong>: Especifica como os dados do formulário serão codificados antes de serem enviados para o servidor. É usado principalmente quando o formulário contém campos do tipo file, que são usados para fazer upload de arquivos. Os valores possíveis são:
+                            <li id="enctype-attribute">
+                                <p>
+                                    <strong><code>enctype</code></strong>: Especifica como os dados do formulário serão codificados antes de serem enviados para o servidor. É usado principalmente quando o formulário contém campos do tipo file, que são usados para fazer upload de arquivos. Os valores possíveis são:
+                                </p>
+
+                                <ul>
+                                    <li>
+                                        <code>application/x-www-form-urlencoded</code>: Codifica os dados no formato de URL, apropriado para formulários com campos de texto e seleção. É o valor padrão;
+                                    </li>
+
+                                    <li>
+                                        <code>multipart/form-data</code>: Usado quando o formulário contém campos do tipo file. Os dados são enviados em uma estrutura multipart/form-data;
+                                    </li>
+
+                                    <li>
+                                        <code>text/plain</code>: Não codifica os dados. São enviados como textos simples (não recomendado).
+                                    </li>
+                                </ul>
+
+                                <figure>
+                                    <img src="Mídia/exemplo-enctype-attribute.JPG" height="100">
+                                    <figcaption>Exemplo usando a tag <strong><code>enctype</code></strong></figcaption>
+                                </figure>
+                            </li>
+
+                            <li id="attibute-autocomplete">
+                                <p>
+                                    <strong><code>autocomplete</code></strong>: Especifica se o recurso de preenchimento automático do navegador deve ser ativado ou desativado para campos de entrada do formulário. Os valores possíveis são:
+                                </p>
+
+                                <ul>
+                                    <li><code>on</code>: Ativa o preenchimento automático (valor padrão);</li>
+                                    <li><code>off</code>: Desativa o preenchimento automático.</li>
+                                </ul>
+                            </li>
+
+                            <li id="novalidate">
+                                <strong><code>novalidate</code></strong>: Especifica que o formulário <strong>não deve ser validado quando enviado</strong>. Isso é útil para evitar a validação padrão do navegador e usar a validação personalizada por meio de <a href="usandojs.html"><strong>JavaScript</strong></a>.
                             </li>
                         </ol>
+
                         <p>
-                            Exemplo da tag <strong>&lt;form&gt;&lt;/form&gt;</strong>: 
+                            A tag <strong>&lt;form&gt;</strong> pode conter uma variedade de elementos de formulário, como <a href="#tag-input"><strong>&lt;input&gt;</strong></a>, <a href="tag-textarea"><strong>&lt;textarea&gt;</strong></a>, <a href="tag-select"><strong>&lt;select&gt;</strong></a>, <a href="tag-button"><strong>&lt;button&gt;</strong></a>, entre outros, que permitem coletar diferentes tipos de dados dos usuários. Esses elementos são colocados dentro da tag <a href="tag-form"><strong>&lt;form&gt;</strong></a> e, quando o formulário é enviado, os dados são enviados ao servidor para processamento.
+                        </p>
+                    </li>
+
+                    <li id="tag-input">
+                        <p>
+                            <strong>&lt;input&gt;</strong>: É uma das tags mais importantes em HTML, pois permite que os usuários interajam com o conteúdo do formulário em uma página da web. Aqui está uma explicação detalhada dos principais atributos da tag &lt;input&gt; e seus respectivos valores:
                         </p>
 
-                        <img src="" alt="">
+                        <ol>
+                            <li id="attribute-type">
+                                <p>
+                                    <strong><code>type</code></strong>: Este atributo define o tipo de entrada que será exibido para o usuário. Alguns valores possíveis são:
+                                </p>
 
-                        <form action="">
+                                <ul>
+                                    <li id="attribute-text"><code>text</code>: Campo de texto para entrada de texto;</li>
+                                    <li id="attribute-password"><code>password</code>: Campo de texto para senhas, onde o texto digitado é mascarado;</li>
+                                    <li id="attribute-email"><code>email</code>: Campo para inserção de endereço de e-mail;</li>
+                                    <li id="attribute-number"><code>number</code>: Campo para inserção de números;</li>
+                                    <li id="attribute-checkbox"><code>checkbox</code>: Caixa de seleção (marcada ou não);</li>
+                                    <li id="attribute-radio"><code>radio</code>: Botão de opção exclusiva;</li>
+                                    <li id="attribute-submit"><code>submit</code>: Botão de envio de formulário;</li>
+                                    <li id="attribute-reset"><code>reset</code>: Botão para redefinir os valores do formulário;</li>
+                                    <li id="attribute-file"><code>file</code>: Campo para inserção de arquivo;</li>
+                                    <li id="attribute-date"><code>date</code>: Campo para inserção de data;</li>
+                                    <li id="attribute-color"><code>color</code>: Campo para seleção de cor;</li>
+                                    <li id="attribute-range"><code>range</code>: Campo para seleção de um intervalo numérico;</li>
+                                    <li id="attribute-button"><code>button</code>: Botão genérico.</li>
+                                </ul>
+                            </li>
 
-                        </form>
+                            <li>
+                                <strong><code>name</code></strong>: Define o nome da entrada, que é usado para identificá-la no servidor quando o formulário é enviado;
+                            </li>
+
+                            <li>
+                                <strong><code>value</code></strong>: Define o valor inicial da entrada. Isso é usado para definir o valor padrão ou para preencher valores pré-existentes;
+                            </li>
+
+                            <li>
+                                <strong><code>placeholder</code></strong>: Fornece um texto de exemplo dentro do campo de entrada, geralmente usado para dar uma dica ao usuário sobre o que inserir;
+                            </li>
+
+                            <li>
+                                <strong><code>disabled</code></strong>: Quando presente, desativa a entrada para que o usuário não possa interagir com ela. Pode ser útil para campos do formulário que não devem ser editados, como informações já preenchidas; para botões de envio após serem apertados, para evitar envios repetidos; etc. Vale lembrar que esse atributo apenas mostra a entrada mas o usuário não pode interagir de nenhuma forma, inclusive selecionar o texto;
+                            </li>
+
+                            <li>
+                                <strong><code>required</code></strong>: Indica que o input é obrigatório para o envio do formulário;
+                            </li>
+
+                            <li>
+                                <strong><code>readonly</code></strong>: Torna a entrada somente leitura, ou seja, o usuário não pode modificar seu valor, mas, diferente do atributo <code>disabled</code>, o usuário pode selecionar o texto;
+                            </li>
+
+                            <li>
+                                <strong><code>checked</code></strong>: Usado em entradas do tipo <a href="#attribute-radio"><code>radio</code></a> e <a href="#attribute-checkbox"><code>checkbox</code></a>;
+                            </li>
+
+                            <li>
+                                <strong><code>maxlength</code></strong>: Define o número máximo de caracteres que o usuário pode digitar;
+                            </li>
+
+                            <li>
+                                <strong><code>min</code></strong> e <strong><code>max</code></strong>: Usados em entradas do tipo <a href="#attribute-number"><code>number</code></a>, <a href="#attribute-date"><code>date</code></a> e <a href="#attribute-range"><code>range</code></a> para delimitar os valores mínimo e máximo permitidos;
+                            </li>
+
+                            <li>
+                                <p>
+                                    <strong><code>step</code></strong>: Usado em inputs do tipo <a href="#attribute-number"><code>number</code></a> e <a href="#attribute-date"><code>date</code></a> para delimitar o intervalo (passo) dos valores possíveis. No exemplo abaixo, a saída seria um formulário no qual, na parte do salário, somente valores múltiplos de 100 seriam aceitos. O atributo <code>step</code> diz para o navegador a qual valor ele deve arredondar aquela entrada. Caso o usuário digite "340", o arquivo <strong>processar-formulario.php</strong> receberia o valor "300". O step também define de quanto em quanto as setas, dentro do input, permitem o usuário de aumentar ou diminuir o valor.
+                                </p>
+
+                                <figure>
+                                    <img src="Mídia/exemplo-tag-forms2.JPG" height="200">
+                                    <figcaption>
+                                        Exemplo usando a tag <strong>&lt;input&gt;&lt;/input&gt;</strong> dentor da tag <strong>&lt;form&gt;&lt;/form&gt;</strong> e outros atributos.
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <strong><code>size</code></strong>: Define a largura visual do campo de entrada em caracteres. Valor padrão: 20 caracteres.
+                                </p>
+
+                                <form id="ex-attribute-size">
+                                    <input type="text" size="10" placeholder="size = 10">
+                                    
+                                    <input type="text" size="20" placeholder="size = 20 (padrão)">
+
+                                    <input type="text" size="40" placeholder="size = 40">
+                                </form>
+                            </li>
+
+                            <li>
+                                <strong><code>autocomplete</code></strong>: Mesmo já tendo adicionado esse atributo à tag <a href="tag-form"><strong>&lt;form&gt;&lt;/form&gt;</strong></a>, é recomendado adicionar o atributo <code>autocomplete = "on"</code> <a href="https://support.google.com/websearch/answer/106230?hl=pt&co=GENIE.Platform%3DAndroid"><abbr title="Veja mais sobre o preenchimento automático Google">(caso queira habilitar o preenchimento automático)</abbr></a> para cada entrada.
+                            </li>
+
+                            <li>
+                                <p>
+                                    <strong><code>pattern</code></strong>: Atributo usado em entradas do tipo <a href="#attribute-text"><code>text</code></a> e <a href="#attribute-password"><code>password</code></a> para especificar uma expressão regular que define um padrão de validação para o valor inserido no campo de entrada. Isso permite que você restrinja os tipos de valores que podem ser inseridos no campo, garantindo que os dados inseridos pelo usuário correspondam a um padrão específico. O valor do atributo <code>pattern</code> é uma expressão regular (regex) que define o padrão de validação. A expressão regular é definida entre barras (<strong>/</strong>), como em <strong>/padrão/</strong>. A expressão regular é escrita usando a sintaxe de expressões regulares padrão. Vamos criar um campo de entrada para um número de telefone no formato (XX) XXXXX-XXXX:
+                                </p>
+
+                                <figure>
+                                    <img src="Mídia/exemplo-attribute-pattern.JPG" height="200">
+                                    <figcaption>Exemplo de como usar o atributo <code>pattern</code> para padronizar o preenchimento de um número de telefone</figcaption>
+                                </figure>
+
+                                <p>
+                                    Analizando o exemplo: 
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li id="tag-textarea">
+                        <strong>&lt;textarea&gt;&lt;/textarea&gt;</strong>: 
+                    </li>
+
+                    <li id="tag-select">
+                        <strong>&lt;select&gt;&lt;/select&gt;</strong>: 
+                    </li>
+
+                    <li id="tag-button">
+                        <strong>&lt;button&gt;&lt;/button&gt;</strong>: 
                     </li>
                 </ul>
             </li>
