@@ -690,6 +690,44 @@
                         </p>
                     </li>
 
+                    <li id="tag-label">
+                        <p>
+                            <strong>&lt;label&gt;&lt;/label&gt;</strong>: Usada para criar uma rótulo associado a um elemento de entrada, como um campo de texto, uma caixa de seleção ou um botão de opção. Isso melhora a usabilidade do formulário, tornando mais fácil para os usuários clicarem no rótulo para selecionar o elemento relacionado. Os rótulos também são úteis para acessibilidade, pois ajudam pessoas com deficiência visual a entender a finalidade dos elementos de entrada. A sintaxe básica da tag <strong><code>&lt;label&gt;</code></strong> é a seguinte:
+                        </p>
+
+                        <img src="Mídia/exemplo-tag-label.JPG" height="200">
+
+                        <p>
+                            A saída será:
+                        </p>
+
+                        <form action="processardados.php" method="post" autocomplete="">
+
+                            <label for="id-do-elemento">Rótulo do elemento de entrada</label>
+                            <input type="tipo-da-entrada" name="nome-no-banco-de-dados" id="id-do-elemento">
+
+                        </form>
+                    </li>
+
+                    <li id="tag-datalist">
+                        <p>
+                            <strong>&lt;datalist&gt;&lt;/datalist&gt;</strong>: Usada em conjunto com a tag <strong>&lt;input&gt;</strong> do tipo <code>text</code> para fornecer uma lista de opções predefinidas que são sugeridas ao usuário à medida que ele digita no campo de entrada. Essa tag é útil para melhorar a usabilidade e permitir que os usuários escolham entre opções comuns sem precisar digitar o texto completo.
+                        </p>
+
+                        <figure>
+                            <img src="Mídia/exemplo-tag-datalist.JPG" height="200">
+                            <figcaption>Estrutura básica da tag <strong>&lt;datalist&gt;&lt;/datalist&gt;</strong></figcaption>
+                        </figure>
+                    </li>
+
+                    <li id="tag-select">
+                        <p>
+                            <strong>&lt;select&gt;&lt;/select&gt;</strong>: usada para criar um elemento de seleção, também conhecido como menu suspenso ou lista de opções. Ela permite que os usuários escolham uma ou várias opções de um conjunto predefinido de valores. A tag <strong>&lt;select&gt;&lt;/select&gt;</strong> é frequentemente usada em formulários para coletar informações dos usuários. Sintaxe básica:
+                        </p>
+
+                        <img src="Mídia/exemplo-tag-select.JPG" alt="exemplo usando a tag select" height="200">
+                    </li>
+
                     <li id="tag-input">
                         <p>
                             <strong>&lt;input&gt;</strong>: É uma das tags mais importantes em HTML, pois permite que os usuários interajam com o conteúdo do formulário em uma página da web. Aqui está uma explicação detalhada dos principais atributos da tag &lt;input&gt; e seus respectivos valores:
@@ -816,7 +854,88 @@
                                     <strong><code>autofocus</code></strong>: Usado para especificar que um campo de entrada deve receber automaticamente o foco quando a página é carregada. Isso é especialmente útil em formulários, onde você deseja direcionar automaticamente a atenção do usuário para um campo específico. Aqui está um exemplo de como usar o atributo <strong><code>autofocus</code></strong> em um campo de entrada:
                                 </p>
 
-                                <img src="" alt="">
+                                <img src="Mídia/exemplo-attribute-autofocus.JPG" alt="exemplo usando o atributo autofocus html">
+
+                                <p>
+                                    Nesse exemplo, o campo de entrada com o id "nome" terá automaticamente o foco quando a página for carregada. Isso significa que o cursor estará automaticamente posicionado neste campo, permitindo ao usuário começar a digitar imediatamente. Note que apenas um campo de entrada dentro de um formulário deve ter o atributo autofocus, já que o foco só pode ser atribuído a um elemento por vez.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <strong><code>list</code></strong>: Usado para associar um campo de entrada (geralmente do tipo text) a um elemento <datalist>. O elemento <datalist> contém uma lista de opções que o usuário pode escolher enquanto digita no campo de entrada. Aqui está um exemplo de como usar o atributo <strong><code>list</code></strong>:
+                                </p>
+
+                                <img src="Mídia/exemplo-attribute-list.JPG" alt="exemplo usando o atributo list html">
+
+                                <p>
+                                    A saída será:
+                                </p>
+
+                                <form action="processardados.php" method="post" autocomplete="on">
+
+                                    <label for="frutas">Escolha uma fruta:</label>
+                                    <input type="text" id="frutas" name="frutas" list="opcoes-frutas">
+
+                                    <datalist id="opcoes-frutas">
+                                        <option value="Maçã">
+                                        <option value="Banana">
+                                        <option value="Laranja">
+                                        <option value="Uva">
+                                        <option value="Abacaxi">
+                                    </datalist>
+                                </form>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <strong><code>multiple</code></strong>: Usado em campos de seleção para permitir que o usuário selecione várias opções. Aqui está um exemplo usando um campo de seleção de múltiplas opções:
+                                </p>
+
+                                <img src="Mídia/exemplo-attribute-multiple.JPG" alt="exemplo usando o atributo multiple HTML">
+
+                                <p>
+                                    A saída será:
+                                </p>
+
+                                <form action="processardados.php">
+
+                                    <label for="frutas">Escolha suas frutas favoritas:</label>
+                                    <select id="frutas" name="frutas[]" multiple>
+                                        <option value="Maçã">Maçã</option>
+                                        <option value="Banana">Banana</option>
+                                        <option value="Laranja">Laranja</option>
+                                        <option value="Uva">Uva</option>
+                                        <option value="Abacaxi">Abacaxi</option>
+                                    </select>
+                                </form>
+
+                                <p>
+                                    Neste exemplo, o atributo multiple é adicionado ao elemento <strong>&lt;select&gt;</strong>, permitindo que o usuário selecione várias opções segurando a tecla Ctrl (ou Command em sistemas Mac) enquanto clica nas opções desejadas. Quando o formulário é enviado, as opções selecionadas são enviadas como um array no servidor. O nome do campo é definido como "frutas[]" para indicar que é um campo de seleção de múltiplas opções.
+                                </p>
+                            </li>
+
+                            <li>
+                                <p>
+                                    <strong><code>accept</code></strong>: Usado para especificar que tipos de arquivos são aceitos em um campo de entrada de arquivo.
+                                </p>
+
+                                <figure>
+                                    <img src="Mídia/exemplo-attribute-accept.JPG" height="250">
+                                    <figcaption>Exemplo de como usar o atributo <strong><code>accept</code></strong></figcaption>
+                                </figure>
+
+                                <p>
+                                    A saída será:
+                                </p>
+
+                                <form action="processardados.php" method="post" autocomplete="on" target="_blank">
+
+                                    <label for="imagem">Escolha uma imagem:</label>
+                                    <input type="file" name="img" id="imagem" accept=".jpg, .png">
+                                    <input type="submit" id="enviar">
+
+                                </form>
                             </li>
                         </ol>
                     </li>
