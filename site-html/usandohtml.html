@@ -949,78 +949,55 @@
                             <strong>&lt;textarea&gt;&lt;/textarea&gt;</strong>: Essa tag é usada para criar uma área de texto onde os usuários podem inserir um texto mais longo, como comentários ou mensagens. Pode ser definido um número de linhas e colunas para controlar o tamanho da área de texto. Fora os atributos das tags de formulários já vistos, na tag <strong>&lt;textarea&gt;&lt;/textarea&gt;</strong> podemos encontrar os atributos <strong><code>rows</code></strong> e <strong><code>cols</code></strong>: Esses atributos definem o número de linhas e colunas da área de texto. Eles controlam a altura e a largura do campo, mas a largura é definida em termos de caracteres.
                         </p>
 
-
-
-
-                            <form action="processardados.php" method="post">
-
-                                <fieldset id="form-gov-nome">
-                                    <label for="nome">Insira seu nome: </label>
-                                    <input type="text" name="name" id="nome" placeholder="Nome completo" maxlength="60" size="50">
-                                </fieldset>
-
-                                <fieldset id="form-gov-regiao">
-                                    <label for="selecionar-região">Selecione a região do estado em que reside: </label>
-                                    <select name="select-zone" id="selecionar-região">
-                                        <option value="norte">Norte</option>
-                                        <option value="nordeste">Nordeste</option>
-                                        <option value="centor-oeste">Centro-Oeste</option>
-                                        <option value="sudeste">Sudeste</option>
-                                        <option value="sul">Sul</option>
-                                    </select>
-                                </fieldset>
-
-                                <fieldset id="form-gov-idade">
-                                    <label for="idade">Insira a sua idade: </label>
-                                    <input type="radio" name="age" id="idade" value="16-">16 anos ou menos
-                                    <input type="radio" name="age" id="idade" value="16-18">16-18
-                                    <input type="radio" name="age" id="idade" value="19-21">19-21
-                                    <input type="radio" name="age" id="idade" value="22-25">22-25
-                                    <input type="radio" name="age" id="idade" value="26-30">26-30
-                                    <input type="radio" name="age" id="idade" value="31-40">31-40
-                                    <input type="radio" name="age" id="idade" value="41-50">41-50
-                                    <input type="radio" name="age" id="idade" value="51-59">51-60
-                                    <input type="radio" name="age" id="idade" value="60+">60 anos ou mais
-                                </fieldset>
-
-                                <fieldset id="form-gov-nota">
-                                    <label for="nota-governo">Dê uma nota para o governo atual: </label>
-                                    <input type="radio" name="government-grade" id="nota-governo" value="1"> 1 (péssimo)
-                                    <input type="radio" name="government-grade" id="nota-governo" value="2"> 2 (ruim)
-                                    <input type="radio" name="government-grade" id="nota-governo" value="3"> 3 (moderado)
-                                    <input type="radio" name="government-grade" id="nota-governo" value="4"> 4 (bom)
-                                    <input type="radio" name="government-grade" id="nota-governo" value="5"> 5 (ótimo)
-                                </fieldset>
-
-                                <fieldset id="form-gov-feedback">
-                                    <label for="feedback">Escreva, baseado em sua experiência até agora, o que você está achando do governo atual: </label>
-
-                                    <div id="campo-feedback">
-                                        <textarea name="feedback" id="feedback" cols="50" rows="10" placeholder="Diga-nos seu feedback em até 10 linhas"></textarea>
-                                    </div>
-                                </fieldset>
-
-                            </form>
-
-
-
-
-
-
-
-
-
-
-                        
                         <figure>
-                            <img src="" height="200">
-                            <figcaption>Exemplo usando os atributos <strong><code>rows</code></strong> e <strong><code>cols</code></strong> na tag <strong>&lt;textarea&gt;&lt;/textarea&gt;</strong></figcaption>
+                            <img src="Mídia/exemplo-tag-textarea.JPG" height="500">
+                            <figcaption>Exemplo de formulário usando a tag <strong>&lt;textarea&gt;&lt;/textarea&gt;</strong></figcaption>
                         </figure>
 
                         <p>
                             A saída será:
                         </p>
 
+                        <form action="processar-dados.py" method="post" target="_blank">
+
+                            <fieldset id="form-gov-nome">
+                                <label for="nome">Insira seu nome: </label>
+                                <input type="text" name="name" id="nome" placeholder="Nome completo" maxlength="60" size="50">
+                            </fieldset>
+
+                            <fieldset id="form-gov-regiao">
+                                <label for="selecionar-região">Selecione a região do estado em que reside: </label>
+                                <select name="select-zone" id="selecionar-região">
+                                    <option value="norte">Norte</option>
+                                    <option value="nordeste">Nordeste</option>
+                                    <option value="centor-oeste">Centro-Oeste</option>
+                                    <option value="sudeste">Sudeste</option>
+                                    <option value="sul">Sul</option>
+                                </select>
+                            </fieldset>
+
+                            <fieldset id="form-gov-nota">
+                                <label for="nota-governo">Dê uma nota para o governo atual: </label>
+                                <input type="radio" name="government-grade" id="nota-governo" value="1"> 1 (péssimo)
+                                <input type="radio" name="government-grade" id="nota-governo" value="2"> 2 (ruim)
+                                <input type="radio" name="government-grade" id="nota-governo" value="3"> 3 (moderado)
+                                <input type="radio" name="government-grade" id="nota-governo" value="4"> 4 (bom)
+                                <input type="radio" name="government-grade" id="nota-governo" value="5"> 5 (ótimo)
+                            </fieldset>
+
+                            <fieldset id="form-gov-feedback">
+                                <label for="feedback">Escreva, baseado em sua experiência até agora, o que você está achando do governo atual: </label>
+
+                                <div id="campo-feedback">
+                                    <textarea name="feedback" id="feedback" cols="50" rows="10" placeholder="Diga-nos seu feedback em até 10 linhas"></textarea>
+                                </div>
+                            </fieldset>
+
+                            <fieldset id="submit">
+                                <input type="submit">
+                            </fieldset>
+
+                        </form>
 
                     </li>
 
