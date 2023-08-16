@@ -960,6 +960,10 @@
 
                         <form action="processar-dados.py" method="post" target="_blank">
 
+                            <fieldset id="form-gov-reset">
+                                <button type="reset">Resetar formulário</button>
+                            </fieldset>
+
                             <fieldset id="form-gov-nome">
                                 <label for="nome">Insira seu nome: </label>
                                 <input type="text" name="name" id="nome" placeholder="Nome completo" maxlength="60" size="50">
@@ -994,7 +998,7 @@
                             </fieldset>
 
                             <fieldset id="submit">
-                                <input type="submit">
+                                <button type="submit" id="botao-enviar">Enviar feedback</button>
                             </fieldset>
 
                         </form>
@@ -1002,7 +1006,62 @@
                     </li>
 
                     <li id="tag-button">
-                        <strong>&lt;button&gt;&lt;/button&gt;</strong>: 
+                        <p>
+                            <strong>&lt;button&gt;&lt;/button&gt;</strong>: Usada para criar um botão interativo em uma página HTML. Os botões são frequentemente usados para enviar formulários, acionar ações do JavaScript ou executar alguma ação específica no site. Aqui está uma explicação detalhada da tag <strong>&lt;button&gt;&lt;/button&gt;</strong> e seus principais atributos:
+                        </p>
+
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong><code>type</code></strong> (obrigatório): Especifica o tipo de ação que o botão executará. Os valores comuns são:
+                                </p>
+                                <ol>
+                                    <li>
+                                        <code>button</code>: Cria um botão comum, que pode ser estilizado e associado a funções JavaScript personalizadas;
+                                    </li>
+
+                                    <li>
+                                        <code>submit</code>: Cria um botão para completar o envio do formulário ao qual o botão pertence;
+                                    </li>
+
+                                    <li>
+                                        <code>reset</code>: Cria um botão que reseta (limpa) todas as informações preenchidas do formuláio ao qual pertence.
+                                    </li>
+                                </ol>
+                            </li>
+
+                            <li>
+                                <strong><code>id</code></strong> (opcional): Este atributo atribui um identificador único ao botão, que pode ser usado para estilização ou seleção por meio de JavaScript;
+                            </li>
+
+                            <li>
+                                <strong><code>name</code></strong> Este atributo especifica o nome do botão, que é usado para enviar o valor do botão quando o formulário é enviado;
+                            </li>
+
+                            <li>
+                                <strong>Conteúdo entre a tag</strong>: O texto ou o conteúdo interno colocado entre as tags <strong>&lt;button&gt;&lt;/button&gt;</strong> é o rótulo do botão que será exibido ao usuário.
+                            </li>
+                        </ul>
+
+                        <figure id="ex-tag-button">
+                            <img src="" height="200">
+                            <figcaption>Exemplo de como usar a tag <strong>&lt;button&gt;&lt;/button&gt;</strong></figcaption>
+                        </figure>
+
+                        <p>
+                            A saída será:
+                        </p>
+
+
+                        <form action="processar-dados.php">
+                            
+                        </form>
+
+
+
+
+
+
                     </li>
                 </ul>
             </li>
