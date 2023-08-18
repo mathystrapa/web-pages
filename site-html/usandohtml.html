@@ -1154,6 +1154,37 @@
         </div>
 
     </section>
+    
+    <section id="comentarios">
+        
+        <h2>Comentários</h2>
+        
+        <p>
+            Gostou do conteúdo? Deixe seu comentário:
+        </p>
+        
+        <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+            <fieldset id="apelido">
+                <label for="apelido">Como quer ser chamado? </label>
+                <input type="text" name="nickname" id="apelido" placeholder="Apelido" maxlength="20"/>
+            </fieldset>
+            
+            <fieldset id="email">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required />
+            </fieldset>
+            
+            <fieldset id="comentario">
+                <label for="comentario">Deixe seu feedback: </label>
+                <textarea name="comment" id=comment rows="5" cols="40" required placeholder="Conteúdo excelente!"></textarea>
+            </fieldset>
+            
+            <fieldset id="enviar">
+                <button type="submit" readonly>Enviar feedback</button>
+            </fieldset>
+        </form>
+        
+    </section>
 
     <section id="outros-blogs">
 
