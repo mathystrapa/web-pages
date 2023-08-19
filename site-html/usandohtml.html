@@ -16,7 +16,6 @@
 
     <header id="outras-paginas">
         <ul>
-            <li><a href="htmlpuro.html">Veja essa mesma página <strong>escrita usando somente HTML</strong></a></li>
             <li><a href="index.html" target="_blank"><strong>Confira tudo sobre desenvolvimento web</strong></a></li>
             <li><a href="front&backend.html" target="_blank"><strong>Entenda de uma vez por todas o que são o front-end e o back-end</strong></a></li>
             <li><a href="apis.html" target="_blank"><strong>O que é uma API?</strong></a></li>
@@ -27,14 +26,18 @@
     </header>
     
     <section id="introdução">
-        <h1>Usando HTML</h1>
-        <p>
-            Nessa página, você vai aprender tudo sobre HTML. <a href="htmlpuro.html"><strong>Clique aqui</strong> para visualizar essa mesma página feita usando <strong>somente HTML</strong></a>, em homenagem a linguagem de marcação que revolucionou o desenvolvimento de páginas web. <a href="htmlpuro.html"><button><img src="https://img.freepik.com/icones-gratis/html-5_318-674234.jpg?w=2000" height="50"></button></a>
-        </p>
+
+        <div id="introdução1">
+            <h1>Usando HTML</h1>
+            
+            <p>
+                Nessa página, você vai aprender tudo sobre HTML. Em homenagem à lingugagem de marcação que revolucionou o desenvolvimento de páginas web no <a href="front&backend.html" target="_parent"><strong>Front-end</strong></a>, essa página não tem nenhum tipo de estilização, sendo construída usando somente HTML (por isso ela não está bonita como estamos acostumados &#128517;)
+            </p>
+        </div>
 
         <h2>Índice</h2>
 
-        <nav>
+        <nav id="indice">
             <ul>
                 <li><a href="#O que é HTML?"><strong>O que é HTML?</strong></a></li>
                 <li><a href="#Estrutura HTML">A estrutura do HTML</a></li>
@@ -966,7 +969,7 @@
                             A saída será:
                         </p>
 
-                        <form action="agradecimento-form.html" method="post">
+                        <form action="agradecimento-form.html" method="post" id="formulario-feedback-governo">
 
                             <fieldset id="form-gov-reset">
                                 <button type="reset">Resetar formulário</button>
@@ -1001,7 +1004,7 @@
                                 <label for="feedback">Escreva, baseado em sua experiência até agora, o que você está achando do governo atual: </label>
 
                                 <div id="campo-feedback">
-                                    <textarea name="feedback" id="feedback" cols="50" rows="10" placeholder="Diga-nos seu feedback em até 10 linhas"></textarea>
+                                    <textarea name="feedback" id="feedback" cols="100" rows="5" placeholder="Diga-nos seu feedback em até 10 linhas" maxlength="500"></textarea>
                                 </div>
                             </fieldset>
 
